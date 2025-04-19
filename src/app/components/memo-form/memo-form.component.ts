@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Moment } from '../../Moment';
 
 @Component({
   selector: 'app-memo-form',
@@ -9,6 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class MemoFormComponent {
   @Input() btnText!: string;
+  @Output() onSubmit = new EventEmitter<Moment>();
 
   memoForm!: FormGroup
 
@@ -29,12 +31,20 @@ export class MemoFormComponent {
     return this.memoForm.get('description')!;
   }
 
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+
+    this.memoForm.patchValue({ image: file });
+  }
+
 
   submit() {
     if(this.memoForm.invalid) {
       return
     }
-    console.log("Enviou o formulário");
+    console.log(this.memoForm.value);
+
+    this.onSubmit.emit(this.memoForm.value);
   }
 
 }

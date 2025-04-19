@@ -1,2 +1,2 @@
 <h2>Share your <span>Memo</span>!</h2>
-<app-memo-form [btnText]="btnText"></app-memo-form>
+<app-memo-form [btnText]="btnText" (onSubmit)="createHandler($event)"></app-memo-form>
