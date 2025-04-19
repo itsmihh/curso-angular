@@ -1,11 +1,17 @@
-<form>
+<form (ngSubmit)="submit()" [formGroup]="memoForm" #formDir="ngForm">
     <div class="form-group">
         <label for="title">Title: </label>
-        <input type="text" placeholder="Type a title" required />
+        <input type="text" placeholder="Type a title" formControlName="title" required />
+        <div *ngIf="title.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="title.errors?.['required']">The tiltle is required!</p>
+        </div>
     </div>
     <div class="form-group">
         <label for="description">Description: </label>
-        <textarea required placeholder="What happend there?"></textarea>
+        <textarea formControlName="description" required placeholder="What happend there?"></textarea>
+        <div *ngIf="description.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="description.errors?.['required']">The description is required!</p>
+        </div>
     </div>
     <div class="form-group">
         <label for="image">Share a picture from this memo: </label>

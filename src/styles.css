@@ -64,4 +64,11 @@
    color: white;
  }
 
+ .validation-error p {
+  color: #fc6c85;
+  font-weight: bold;
+  margin-top: .4em;
+  margin-left: .4em;
+  padding-left: 0.2em;
+ }
  
