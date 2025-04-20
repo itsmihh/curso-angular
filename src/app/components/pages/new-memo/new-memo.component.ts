@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { MemoFormComponent } from '../../memo-form/memo-form.component';
 import { Moment } from '../../../Moment';
 import { MemoService } from '../../../services/memo.service';
+import { MessagesService } from '../../../services/messages.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-memo',
@@ -12,7 +14,7 @@ import { MemoService } from '../../../services/memo.service';
 export class NewMemoComponent {
   btnText = 'Share!';
 
-  constructor(private memoService: MemoService) {}
+  constructor(private memoService: MemoService, private messagesService: MessagesService, private router: Router) {}
  
 async createHandler(memo: Moment) {
     const formData = new FormData()
@@ -25,13 +27,13 @@ async createHandler(memo: Moment) {
     }
 
     //enviar para o service
-    this.memoService.createMemo(formData).subscribe({
+   await this.memoService.createMemo(formData).subscribe({
       next: (res) => console.log('Requisição feita com sucesso', res),
       error: (err) => console.error('Erro na requisição', err)
     })
 
-    //exibir mensagem
+    this.messagesService.add('Memo added with sucess!');
 
-    //redirect
+    this.router.navigate(['/']);
   }
 }

@@ -13,6 +13,8 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NewMemoComponent } from './components/pages/new-memo/new-memo.component';
 import { MemoFormComponent } from './components/memo-form/memo-form.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,14 +24,16 @@ import { MemoFormComponent } from './components/memo-form/memo-form.component';
     AboutComponent,
     HomeComponent,
     NewMemoComponent,
-    MemoFormComponent
+    MemoFormComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
