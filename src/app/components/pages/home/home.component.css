@@ -1,0 +1,51 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 0.5em;
+}
+
+.memos-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.memo {
+    width: 32%;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.memo img {
+    width: 100%;
+    margin-bottom: 1em;
+    object-fit: cover;
+}
+
+.memo h3, .memo p {
+    margin-bottom: 1em;
+}
+
+.memo .date {
+    font-size: 0.7em;
+    font-style: italic;
+}
+
+a {
+    color: #fc6c85;
+    padding: .3em;
+}
+
+a:hover {
+    color: white;
+    background-color: #fc6c85;
+    border-radius: 10px;
+}
+

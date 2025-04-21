@@ -5,6 +5,7 @@ import { Moment } from '../Moment';
 
 // import { environment } from '../../environments/environment';
 import { environment } from '../../environments/environment.development';
+import { Response } from '../Response';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,10 @@ export class MemoService {
   private apiUrl = `${this.baseApiUrl}api/memo-gallery`
 
   constructor(private http: HttpClient) { }
+
+  getMemos(): Observable<Response<Moment[]>> {
+    return this.http.get<Response<Moment[]>>(this.apiUrl);
+  }
 
   createMemo(formData: FormData): Observable<FormData> {
     console.log('Chamando POST para:', this.apiUrl);
