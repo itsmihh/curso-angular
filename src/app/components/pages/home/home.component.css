@@ -26,6 +26,7 @@ h2 {
 .memo img {
     width: 300px;
     height: 300px;
+    border-radius: 10px;
     margin-bottom: 1em;
     object-fit: cover;
 }

@@ -1,3 +1,21 @@
 <div class="memo" *ngIf="memo">
     <h1>{{ memo.title }}</h1>
+    <img src="{{ baseApiUrl }}uploads/{{ memo.image }}" alt="{{memo.title}}">
+    <div class="about-memo">
+        <h4>About this memo:</h4>
+        <p> {{ memo.description }}</p>
+    </div>
+    <div class="actions">
+        <h3>Actions: </h3>
+        <a href="/memos/edit/{{memo.id}}" class="edit-btn">
+            <fa-icon [icon]="faEdit"></fa-icon> Edit
+        </a>
+        <button class="remove-btn">
+            <fa-icon [icon]="faTimes"></fa-icon> Delete
+        </button>
+    </div>
+    <!-- comments -->
+     <div class="comments">
+        <p>Comments</p>
+     </div>
 </div>
