@@ -20,8 +20,14 @@ export class MemoService {
     return this.http.get<Response<Moment[]>>(this.apiUrl);
   }
 
+  getMemo(id: number):Observable<Response<Moment>> {
+    const url = `${this.apiUrl}/${id}`
+    return this.http.get<Response<Moment>>(url)
+   }
+
   createMemo(formData: FormData): Observable<FormData> {
     console.log('Chamando POST para:', this.apiUrl);
     return this.http.post<FormData>(this.apiUrl, formData);
   }
  }
+

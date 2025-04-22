@@ -18,7 +18,8 @@ export class HomeComponent {
   memos: Moment[] = []
   baseApiUrl = environment.baseApiUrl;
 
-  //todo search
+  faSearch = faSearch;
+  searchTerm: string = "";
 
   constructor(private memoService: MemoService) {}
 
@@ -37,6 +38,16 @@ export class HomeComponent {
       this.allMemos = data;
       this.memos = data;
     })
+  }
+
+  search(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
+
+    this.memos = this.allMemos.filter(memos => {
+      return memos.title.toLowerCase().includes(value)
+    })
+
   }
 
 }

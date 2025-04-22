@@ -24,7 +24,8 @@ h2 {
 }
 
 .memo img {
-    width: 100%;
+    width: 300px;
+    height: 300px;
     margin-bottom: 1em;
     object-fit: cover;
 }
@@ -49,3 +50,24 @@ a:hover {
     border-radius: 10px;
 }
 
+.search-container {
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.search-container form {
+    width: 30%;
+    position: relative;
+}
+
+.search-container fa-icon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.search-container input {
+    padding: .5em;
+    width: 100%;
+    text-align: center;
+}
