@@ -11,8 +11,10 @@ import { Moment } from '../../Moment';
 export class MemoFormComponent {
   @Input() btnText!: string;
   @Output() onSubmit = new EventEmitter<Moment>();
+  @Input() memoData: Moment | null = null;
 
-  memoForm!: FormGroup
+  memoForm!: FormGroup;
+
 
   ngOnInit():void {
     this.memoForm = new FormGroup({

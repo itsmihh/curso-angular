@@ -16,6 +16,7 @@ import { MemoFormComponent } from './components/memo-form/memo-form.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MemoComponent } from './components/pages/memo/memo.component';
+import { EditMemoComponent } from './components/pages/edit-memo/edit-memo.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MemoComponent } from './components/pages/memo/memo.component';
     NewMemoComponent,
     MemoFormComponent,
     MessagesComponent,
-    MemoComponent
+    MemoComponent,
+    EditMemoComponent
   ],
   imports: [
     BrowserModule,

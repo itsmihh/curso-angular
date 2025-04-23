@@ -29,5 +29,10 @@ export class MemoService {
     console.log('Chamando POST para:', this.apiUrl);
     return this.http.post<FormData>(this.apiUrl, formData);
   }
+
+  removeMemo(id: number) {
+    const url = `${this.apiUrl}/${id}`
+    return this.http.delete(url)
+  }
  }
 

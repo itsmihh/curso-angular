@@ -1,0 +1,4 @@
+<div *ngIf="memo">
+    <h2>Editando o momento <span>{{ memo.title }}</span></h2>
+    <app-memo-form [memoData]="memo" [btnText]="btnText"></app-memo-form>
+</div>
