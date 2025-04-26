@@ -18,9 +18,9 @@ export class MemoFormComponent {
 
   ngOnInit():void {
     this.memoForm = new FormGroup({
-      id: new FormControl(''),
-      title: new FormControl('', [Validators.required]),
-      description: new FormControl('', [Validators.required]),
+      id: new FormControl(this.memoData ? this.memoData.id : ''),
+      title: new FormControl(this.memoData ? this.memoData.title : '', [Validators.required]),
+      description: new FormControl(this.memoData ? this.memoData.description : '', [Validators.required]),
       image: new FormControl('')
     });
   }
