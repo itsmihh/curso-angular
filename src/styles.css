@@ -41,10 +41,14 @@
 
  .form-group input, .form-group textarea {
    padding: 0.9em;
-   color: #FF007F;
    font-size: 0.8em;
    border-radius: 30px;
-   border-color: black;
+   border-color: #fc6c85;
+   border-style: double;
+ }
+
+ input[type="file"] {
+  border: none;
  }
 
  input[type="submit"] {
