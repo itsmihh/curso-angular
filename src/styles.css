@@ -95,7 +95,7 @@ button fa-icon, a fa-icon {
 .edit-btn, .edit-btn path {
   border-radius: 10px;
   border-color: white;
-  color: #FF007F;
+  color: #fc6c85;
 }
 
 .edit-btn:hover, .edit-btn:hover path {
@@ -106,7 +106,7 @@ button fa-icon, a fa-icon {
 .remove-btn, .remove-btn path {
   border-radius: 10px;
   border-color: white;
-  color: #FF007F;
+  color: #fc6c85;
 }
 
 .remove-btn:hover, .remove-btn:hover path {
