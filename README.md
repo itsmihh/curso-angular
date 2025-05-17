@@ -23,10 +23,22 @@ Neste projeto, pude compreender e aplicar os conceitos fundamentais do Angular, 
 - Criação e reutilização de componentes
 - Navegação entre páginas usando rotas
 - Manipulação básica de formulários
+  
+
+## 🔗 Backend / API
+
+Este projeto depende de uma API desenvolvida com Adonis.js, que é responsável por armazenar e recuperar os 'memos' e comentários.
+
+Sem essa API, o frontend não funciona corretamente, pois não há onde salvar ou carregar os dados.
+
+No momento, o código da API não está disponível publicamente.
+
+Para entender como a API foi criada, você pode conferir o vídeo que segui como referência:  
+[API RESTful com AdonisJS - Aprenda Adonis em 1 hora](https://youtu.be/y8XfJJYhXPE?si=NFTeblsAEzYPZGPd)
 
 
 
-
+---
 Feito com 💜 por Milena
 [LinkedIn](https://www.linkedin.com/in/milena-cristina-da-silva-0ba768318/) | [GitHub](https://github.com/itsmihh)
 
